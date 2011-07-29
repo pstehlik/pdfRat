@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+group = 'com.pstehlik.rat.pdfRat'
+version = '0.1'
+mainClassName = "com.pstehlik.pdfRat.AppRunner"
+author= 'Philip Stehlik'
+
+repositories {
+  flatDir name: 'lib', dirs: 'lib'
+  mavenCentral()
+}
+dependencies {
+  groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.0'
+  compile group: 'com.bleedingwolf.ratpack', name: 'ratpack', version: '0.2-SNAPSHOT'
+  compile group: 'org.xhtmlrenderer', name: 'core-renderer', version: 'R8pre2'
+  compile group: 'com.lowagie', name: 'itext', version: '2.1.0'
+  compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+  compile(group: 'org.mortbay.jetty', name: 'jetty', version: '6.1.26') { exclude module: 'servlet-api' }
+
+}
