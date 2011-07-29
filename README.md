@@ -1,8 +1,9 @@
 pdfRat
 =======
 
-A HTTP based PDF renderer - coded with Groovy, Gradle and Ratpack
+A HTTP based PDF renderer
 --------------------------------
+coded with Groovy, Gradle and Ratpack
 
   [Ratpack]: https://raw.github.com/bleedingwolf/Ratpack
   [Gradle]: http://gradle.org
