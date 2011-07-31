@@ -16,7 +16,7 @@ Example: http://localhost:5000/pdf?html=<body>hello%20there</body>
 }
 
 get("/pdf") {
-  def renderedView = request.parameters.html
+  String renderedView = request.getParameterValues('html')?.getAt(0)
 
   response.setHeader('Content-Type', mimetypesFileTypeMap.getContentType('pdf'))
   ITextRenderer renderer
